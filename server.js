@@ -38,8 +38,11 @@ app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "./public")));
 app.use("/subdir", express.static(path.join(__dirname, "./public")));
 
+
+
 app.use("/", require("./Routes/root")); 
 app.use("/subdir", require("./Routes/subdir"));
+app.use("/employees", require("./Routes/api/employees"));
 
 
 
